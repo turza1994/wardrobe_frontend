@@ -9,7 +9,7 @@
     "lint": "eslint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "mock:server": "json-server --watch db.json --port 3001 --delay 400"
+    "mock:server": "json-server db.json --port 3001"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -18,10 +18,22 @@ export async function getProducts(filters?: ProductFilters): Promise<Product[]> 
     params.set('_start', String((filters.page - 1) * filters.limit));
     params.set('_limit', String(filters.limit));
   }
-  if (filters?.sort === 'price_asc') params.set('_sort', 'price'), params.set('_order', 'asc');
-  if (filters?.sort === 'price_desc') params.set('_sort', 'price'), params.set('_order', 'desc');
-  if (filters?.sort === 'newest') params.set('_sort', 'createdAt'), params.set('_order', 'desc');
-  if (filters?.sort === 'rating') params.set('_sort', 'rating'), params.set('_order', 'desc');
+  if (filters?.sort === 'price_asc') {
+    params.set('_sort', 'price');
+    params.set('_order', 'asc');
+  }
+  if (filters?.sort === 'price_desc') {
+    params.set('_sort', 'price');
+    params.set('_order', 'desc');
+  }
+  if (filters?.sort === 'newest') {
+    params.set('_sort', 'createdAt');
+    params.set('_order', 'desc');
+  }
+  if (filters?.sort === 'rating') {
+    params.set('_sort', 'rating');
+    params.set('_order', 'desc');
+  }
 
   const url = `${API.PRODUCTS.LIST}${params.toString() ? `?${params.toString()}` : ''}`;
 
