@@ -1,0 +1,254 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "mobile": "01712345678",
+      "name": "Rahim Hossain",
+      "email": "rahim@example.com",
+      "password": "password123",
+      "role": "customer",
+      "refreshToken": ""
+    },
+    {
+      "id": "u2",
+      "mobile": "01912345679",
+      "name": "Karim Vendor",
+      "email": "karim@example.com",
+      "password": "password123",
+      "role": "vendor",
+      "refreshToken": ""
+    },
+    {
+      "id": "u3",
+      "mobile": "01612345670",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "refreshToken": ""
+    }
+  ],
+  "vendors": [
+    {
+      "id": "v1",
+      "userId": "u2",
+      "storeName": "Karim Fashion",
+      "description": "Premium fashion vendor",
+      "rating": 4.5,
+      "totalSales": 120,
+      "isVerified": true,
+      "logo": "https://placehold.co/100x100/667eea/fff?text=KF",
+      "createdAt": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "categories": [
+    { "id": "c1", "name": "T-Shirts", "slug": "t-shirts", "image": "https://placehold.co/300x200/764ba2/fff?text=T-Shirts", "productCount": 12 },
+    { "id": "c2", "name": "Pants", "slug": "pants", "image": "https://placehold.co/300x200/667eea/fff?text=Pants", "productCount": 8 },
+    { "id": "c3", "name": "Dresses", "slug": "dresses", "image": "https://placehold.co/300x200/f093fb/fff?text=Dresses", "productCount": 15 },
+    { "id": "c4", "name": "Shoes", "slug": "shoes", "image": "https://placehold.co/300x200/4facfe/fff?text=Shoes", "productCount": 10 },
+    { "id": "c5", "name": "Accessories", "slug": "accessories", "image": "https://placehold.co/300x200/43e97b/fff?text=Accessories", "productCount": 22 },
+    { "id": "c6", "name": "Jackets", "slug": "jackets", "image": "https://placehold.co/300x200/fa709a/fff?text=Jackets", "productCount": 6 }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "title": "Premium Cotton T-Shirt",
+      "slug": "premium-cotton-t-shirt",
+      "price": 849,
+      "originalPrice": 1200,
+      "images": [
+        "https://placehold.co/600x700/667eea/fff?text=T-Shirt+Front",
+        "https://placehold.co/600x700/764ba2/fff?text=T-Shirt+Back"
+      ],
+      "description": "High-quality 100% cotton t-shirt, perfect for everyday wear. Available in multiple sizes and colors.",
+      "stock": 50,
+      "sku": "TSH-001-BL",
+      "vendorId": "v1",
+      "categoryId": "c1",
+      "rating": 4.5,
+      "reviewCount": 28,
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["White", "Black", "Navy"],
+      "tags": ["cotton", "casual", "everyday"],
+      "isFeatured": true,
+      "isActive": true,
+      "createdAt": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "id": "p2",
+      "title": "Slim Fit Denim Jeans",
+      "slug": "slim-fit-denim-jeans",
+      "price": 1999,
+      "originalPrice": 2800,
+      "images": [
+        "https://placehold.co/600x700/4facfe/fff?text=Jeans+Front",
+        "https://placehold.co/600x700/00f2fe/fff?text=Jeans+Back"
+      ],
+      "description": "Classic slim-fit denim jeans with comfortable stretch fabric. Durable and stylish for any occasion.",
+      "stock": 30,
+      "sku": "JNS-002-BL",
+      "vendorId": "v1",
+      "categoryId": "c2",
+      "rating": 4.3,
+      "reviewCount": 15,
+      "sizes": ["28", "30", "32", "34", "36"],
+      "colors": ["Blue", "Black", "Grey"],
+      "tags": ["denim", "jeans", "slim fit"],
+      "isFeatured": true,
+      "isActive": true,
+      "createdAt": "2025-06-02T00:00:00.000Z"
+    },
+    {
+      "id": "p3",
+      "title": "Floral Summer Dress",
+      "slug": "floral-summer-dress",
+      "price": 1499,
+      "originalPrice": 2200,
+      "images": [
+        "https://placehold.co/600x700/f093fb/fff?text=Dress+Front",
+        "https://placehold.co/600x700/f5576c/fff?text=Dress+Back"
+      ],
+      "description": "Beautiful floral print summer dress. Light, breathable fabric perfect for warm weather events.",
+      "stock": 25,
+      "sku": "DRS-003-FL",
+      "vendorId": "v1",
+      "categoryId": "c3",
+      "rating": 4.7,
+      "reviewCount": 42,
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["Pink", "Yellow", "Blue"],
+      "tags": ["dress", "floral", "summer"],
+      "isFeatured": true,
+      "isActive": true,
+      "createdAt": "2025-06-03T00:00:00.000Z"
+    },
+    {
+      "id": "p4",
+      "title": "Canvas Sneakers",
+      "slug": "canvas-sneakers",
+      "price": 1299,
+      "originalPrice": 1800,
+      "images": [
+        "https://placehold.co/600x700/43e97b/fff?text=Sneakers+Left",
+        "https://placehold.co/600x700/38f9d7/fff?text=Sneakers+Right"
+      ],
+      "description": "Lightweight canvas sneakers with rubber sole. Classic design suitable for casual and semi-casual wear.",
+      "stock": 40,
+      "sku": "SHO-004-CN",
+      "vendorId": "v1",
+      "categoryId": "c4",
+      "rating": 4.2,
+      "reviewCount": 19,
+      "sizes": ["38", "39", "40", "41", "42", "43", "44"],
+      "colors": ["White", "Black", "Red"],
+      "tags": ["sneakers", "canvas", "casual"],
+      "isFeatured": false,
+      "isActive": true,
+      "createdAt": "2025-06-04T00:00:00.000Z"
+    },
+    {
+      "id": "p5",
+      "title": "Leather Watch Band",
+      "slug": "leather-watch-band",
+      "price": 599,
+      "originalPrice": 900,
+      "images": [
+        "https://placehold.co/600x700/fa709a/fff?text=Watch+Band"
+      ],
+      "description": "Genuine leather watch band compatible with most standard watch lugs. Professional brown finish.",
+      "stock": 100,
+      "sku": "ACC-005-LW",
+      "vendorId": "v1",
+      "categoryId": "c5",
+      "rating": 4.0,
+      "reviewCount": 8,
+      "sizes": ["18mm", "20mm", "22mm"],
+      "colors": ["Brown", "Black"],
+      "tags": ["watch", "leather", "accessories"],
+      "isFeatured": false,
+      "isActive": true,
+      "createdAt": "2025-06-05T00:00:00.000Z"
+    },
+    {
+      "id": "p6",
+      "title": "Windbreaker Jacket",
+      "slug": "windbreaker-jacket",
+      "price": 2999,
+      "originalPrice": 4500,
+      "images": [
+        "https://placehold.co/600x700/a18cd1/fff?text=Jacket+Front",
+        "https://placehold.co/600x700/fbc2eb/fff?text=Jacket+Back"
+      ],
+      "description": "Water-resistant windbreaker jacket. Lightweight and packable, ideal for outdoor activities.",
+      "stock": 15,
+      "sku": "JKT-006-WB",
+      "vendorId": "v1",
+      "categoryId": "c6",
+      "rating": 4.6,
+      "reviewCount": 33,
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Navy", "Olive", "Red"],
+      "tags": ["jacket", "windbreaker", "outdoor"],
+      "isFeatured": true,
+      "isActive": true,
+      "createdAt": "2025-06-06T00:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o1",
+      "userId": "u1",
+      "items": [
+        { "productId": "p1", "title": "Premium Cotton T-Shirt", "price": 849, "quantity": 2 }
+      ],
+      "total": 1698,
+      "status": "delivered",
+      "shippingAddress": {
+        "street": "123 Mirpur Road",
+        "city": "Dhaka",
+        "district": "Dhaka",
+        "postalCode": "1216"
+      },
+      "paymentMethod": "bkash",
+      "createdAt": "2025-11-01T00:00:00.000Z",
+      "updatedAt": "2025-11-05T00:00:00.000Z"
+    },
+    {
+      "id": "o2",
+      "userId": "u1",
+      "items": [
+        { "productId": "p3", "title": "Floral Summer Dress", "price": 1499, "quantity": 1 },
+        { "productId": "p5", "title": "Leather Watch Band", "price": 599, "quantity": 1 }
+      ],
+      "total": 2098,
+      "status": "processing",
+      "shippingAddress": {
+        "street": "456 Gulshan Ave",
+        "city": "Dhaka",
+        "district": "Dhaka",
+        "postalCode": "1212"
+      },
+      "paymentMethod": "nagad",
+      "createdAt": "2025-12-01T00:00:00.000Z",
+      "updatedAt": "2025-12-01T00:00:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "productId": "p1",
+      "userId": "u1",
+      "rating": 5,
+      "comment": "Excellent quality! Very comfortable and the fabric is top notch.",
+      "createdAt": "2025-11-10T00:00:00.000Z"
+    },
+    {
+      "id": "r2",
+      "productId": "p3",
+      "userId": "u1",
+      "rating": 4,
+      "comment": "Beautiful dress, exactly as described. Shipping was fast too.",
+      "createdAt": "2025-11-15T00:00:00.000Z"
+    }
+  ]
+}
