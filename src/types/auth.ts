@@ -1,12 +1,11 @@
-export type UserRole = 'customer' | 'vendor' | 'admin';
+export type Role = "customer" | "vendor" | "admin";
 
 export interface User {
   id: string;
-  mobile: string;
   name: string;
-  email: string;
-  role: UserRole;
-  createdAt?: string;
+  mobile: string;
+  email?: string;
+  role: Role;
 }
 
 export interface AuthResponse {
@@ -15,33 +14,25 @@ export interface AuthResponse {
   user: User;
 }
 
-export interface LoginPayload {
-  mobile: string;
-  password: string;
-}
-
-export interface RegisterPayload {
+export interface RegisterInput {
   mobile: string;
   name: string;
-  email: string;
-  password: string;
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
 }
 
-export interface OTPVerifyPayload {
+export interface RegisterResponse {
+  mobile: string;
+  message: string;
+}
+
+export interface VerifyOtpInput {
   mobile: string;
   otp: string;
 }
 
-export interface RefreshTokenPayload {
-  refreshToken: string;
-}
-
-export interface TokenPair {
-  accessToken: string;
-  refreshToken: string;
-}
-
-export interface RegisterResponse {
-  message: string;
+export interface LoginInput {
   mobile: string;
+  password?: string;
 }
