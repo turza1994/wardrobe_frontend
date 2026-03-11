@@ -1,27 +1,21 @@
-'use client';
+import { Suspense } from "react";
+import { AuthCard } from "@/components/auth/AuthCard";
+import { OTPVerificationForm } from "@/components/auth/OTPVerificationForm";
+import { Metadata } from "next";
 
-import { useSearchParams } from 'next/navigation';
-import { OTPInputForm } from '@/components/auth/OTPInputForm';
-import { Suspense } from 'react';
+export const metadata: Metadata = {
+  title: "Verify OTP | ShareWardrobe",
+};
 
-// TODO: Design OTP verification page
-function VerifyOTPContent() {
-  const searchParams = useSearchParams();
-  const mobile = searchParams.get('mobile') ?? '';
-
+export default function VerifyOtpPage() {
   return (
-    <div>
-      <h1>Verify OTP</h1>
-      <p>Sent to: {mobile}</p>
-      <OTPInputForm onComplete={(otp) => console.log('OTP:', otp)} />
-    </div>
-  );
-}
-
-export default function VerifyOTPPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <VerifyOTPContent />
-    </Suspense>
+    <AuthCard
+      title="Verify Your Mobile"
+      description="Enter the 6-digit code sent to your mobile number"
+    >
+      <Suspense fallback={<div className="text-center py-6 text-pink-600 animate-pulse">Loading verification details...</div>}>
+        <OTPVerificationForm />
+      </Suspense>
+    </AuthCard>
   );
 }

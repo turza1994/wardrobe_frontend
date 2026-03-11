@@ -1,11 +1,21 @@
-import { RegisterForm } from '@/components/auth/RegisterForm';
+import { AuthCard } from "@/components/auth/AuthCard";
+import { RegisterForm } from "@/components/auth/RegisterForm";
+import { Metadata } from "next";
 
-// TODO: Design register page
+export const metadata: Metadata = {
+  title: "Register | ShareWardrobe",
+};
+
 export default function RegisterPage() {
   return (
-    <div>
-      <h1>Create Account</h1>
+    <AuthCard
+      title="Create an Account"
+      description="Join our dynamic fashion community today"
+      footerText="Already have an account?"
+      footerLinkText="Login"
+      footerLinkHref="/auth/login"
+    >
       <RegisterForm />
-    </div>
+    </AuthCard>
   );
 }

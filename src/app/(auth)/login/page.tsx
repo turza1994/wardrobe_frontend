@@ -1,11 +1,21 @@
-import { LoginForm } from '@/components/auth/LoginForm';
+import { AuthCard } from "@/components/auth/AuthCard";
+import { LoginForm } from "@/components/auth/LoginForm";
+import { Metadata } from "next";
 
-// TODO: Design login page
+export const metadata: Metadata = {
+  title: "Login | ShareWardrobe",
+};
+
 export default function LoginPage() {
   return (
-    <div>
-      <h1>Login</h1>
+    <AuthCard
+      title="Welcome Back"
+      description="Enter your mobile number and password to login"
+      footerText="Don't have an account?"
+      footerLinkText="Register"
+      footerLinkHref="/register"
+    >
       <LoginForm />
-    </div>
+    </AuthCard>
   );
 }
