@@ -1,11 +1,12 @@
-/**
- * Format a number as Bangladeshi Taka (BDT)
- * e.g. 1299 → "৳1,299"
- */
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-BD', {
-    style: 'currency',
-    currency: 'BDT',
+export function formatCurrency(
+  amount: number | undefined,
+  currencyCode: string = "BDT",
+  locale: string = "en-BD"
+): string {
+  if (amount === undefined) return "";
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currencyCode,
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount);

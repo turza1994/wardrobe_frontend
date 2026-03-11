@@ -63,3 +63,11 @@ export interface CreateProductPayload {
   tags: string[];
   isFeatured?: boolean;
 }
+
+export interface CartItem {
+  id: string; // unique cart item id (product.id + size + color)
+  product: Product;
+  quantity: number;
+  selectedSize?: string;
+  selectedColor?: string;
+}

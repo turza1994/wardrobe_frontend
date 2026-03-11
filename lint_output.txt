@@ -1,0 +1,43 @@
+
+> wardrobe_frontend@0.1.0 lint
+> eslint
+
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\app\(dashboard)\dashboard\products\[id]\page.tsx
+  6:1  warning  Prevent Client Components from being async functions. See: https://nextjs.org/docs/messages/no-async-client-component  @next/next/no-async-client-component
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\auth\PhoneInput.tsx
+  3:22  warning  'useState' is defined but never used                              @typescript-eslint/no-unused-vars
+  7:18  error    An interface declaring no members is equivalent to its supertype  @typescript-eslint/no-empty-object-type
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\dashboard\DataTable.tsx
+  53:17  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\dashboard\DataTable.tsx:53:17
+  51 |   const [rowSelection, setRowSelection] = React.useState({});
+  52 |
+> 53 |   const table = useReactTable({
+     |                 ^^^^^^^^^^^^^ TanStack Table's `useReactTable()` API returns functions that cannot be memoized safely
+  54 |     data,
+  55 |     columns,
+  56 |     onSortingChange: setSorting,  react-hooks/incompatible-library
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\shared\DesktopNavigation.tsx
+  34:19  error  Do not use an `<a>` element to navigate to `/products/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\shared\FormField.tsx
+  21:28  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\components\shared\Navbar.tsx
+  4:38  warning  'Menu' is defined but never used  @typescript-eslint/no-unused-vars
+
+D:\webdev\projects\shareWardrobe\wardrobe_frontend\src\services\product.service.ts
+  21:38  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  22:39  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  23:35  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  24:35  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 11 problems (3 errors, 8 warnings)
+
